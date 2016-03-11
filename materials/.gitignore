@@ -6,3 +6,7 @@
 /client/phase-2/bower_components
 /client/phase-3/node_modules
 /client/phase-3/bower_components
+/client/phase-4/node_modules
+/client/phase-4/bower_components
+/client/phase-4/build/bundle.js
+/client/phase-4/build/bundle.css

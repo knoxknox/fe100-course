@@ -1,7 +1,6 @@
 {
-  "private": true,
+  "name": "training",
   "version": "1.0.0",
-  "name": "modern-web-frameworks",
   "dependencies": {
     "jquery": "^2.1.4",
     "backbone": "^1.2.1",

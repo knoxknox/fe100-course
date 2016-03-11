@@ -1,7 +1,7 @@
 {
   "private": true,
+  "name": "training",
   "version": "1.0.0",
-  "name": "node-hapi",
   "dependencies": {
     "hapi": "^8.8.0",
     "knex": "^0.8.6",

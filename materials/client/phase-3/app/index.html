@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/app.css">
+    <link rel="stylesheet" href="stylesheets/blog.css">
+    <link rel="stylesheet" href="stylesheets/loader.css">
+    <link rel="stylesheet" href="stylesheets/pikaday.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  </head>
+  <body ng-app="training">
+    <div class="loader" data-loading>
+      Oh, looks like your request idle
+    </div>
+
+    <div id="application" class="ng-hide">
+      <div id="menu">
+        <div class="blog-masthead">
+          <div class="container">
+            <nav class="blog-nav">
+              <a class="blog-nav-item" ng-href="#/index">Home</a>
+              <a class="blog-nav-item" ng-href="#/create">Create</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="header">
+          <div class="blog-header">
+            <h1 class="blog-title">Post list</h1>
+            <p class="lead blog-description">modern web frameworks</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-8 blog-main">
+            <div id="content">
+              <div ng-view=""></div>
+            </div>
+          </div>
+
+          <div class="col-sm-3 col-sm-offset-1 blog-sidebar" ng-controller="PostCtrl">
+            <div id="posts-count">
+              <div class="sidebar-module">
+                <h4>Posts:</h4>
+                <p>Number of posts: {{posts.length}}</p>
+              </div>
+            </div>
+            <div id="posts-recent">
+              <div class="sidebar-module">
+                <h4>Recent:</h4>
+                <ol class="list-unstyled" ng-repeat="post in posts | orderBy:'-id' | limitTo:5">
+                  <li><a class="recent-post" ng-href="#/update/{{post.id}}">{{post.title}}</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/pikaday/pikaday.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/pikaday-angular/pikaday-angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+
+    <script src="javascripts/app.js"></script>
+    <script src="javascripts/ctrl/form.js"></script>
+    <script src="javascripts/ctrl/post.js"></script>
+    <script src="javascripts/drcv/mindate.js"></script>
+    <script src="javascripts/drcv/spinner.js"></script>
+    <script src="javascripts/services/post.js"></script>
+    <script src="javascripts/services/posts.js"></script>
+  </body>
+</html>

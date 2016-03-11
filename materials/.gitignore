@@ -2,3 +2,5 @@
 /client/phase-1/node_modules
 /client/phase-1/build/bundle.js
 /client/phase-1/build/bundle.css
+/client/phase-2/node_modules
+/client/phase-2/bower_components

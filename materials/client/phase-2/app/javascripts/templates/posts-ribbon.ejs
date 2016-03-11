@@ -1,0 +1,9 @@
+<% this.collection.each(function(model) { %>
+<div class="blog-post">
+  <h2 class="blog-post-title">
+    <% var link = "#update/" + model.get('id') %>
+    <a href="<%= link %>"><%= model.get('title') %></a>
+  </h2>
+  <p class="blog-post-content"><%= model.get('body') %></p>
+</div>
+<% }); %>

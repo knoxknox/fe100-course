@@ -1,0 +1,9 @@
+<div class="sidebar-module">
+  <h4>Recent:</h4>
+  <ol class="list-unstyled">
+  <% _.each(this.collection.latest(), function(model) { %>
+    <% var link = "#update/" + model.get('id') %>
+    <li><a href="<%= link %>"><%= model.get('title') %></a></li>
+  <% }); %>
+  </ol>
+</div>

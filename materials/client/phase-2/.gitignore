@@ -1,0 +1,6 @@
+/dist
+/test/temp
+/node_modules
+/bower_components
+/.tmp
+/.sass-cache

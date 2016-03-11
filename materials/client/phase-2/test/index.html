@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Spec Runner</title>
+  <link rel="stylesheet" href="../bower_components/mocha/mocha.css">
+</head>
+<body>
+  <div id="mocha"></div>
+  <script src="../bower_components/chai/chai.js"></script>
+  <script src="../bower_components/mocha/mocha.js"></script>
+  <script src="../bower_components/moment/moment.js"></script>
+  <script src="../bower_components/lodash/dist/lodash.min.js"></script>
+  <script src="../bower_components/backbone/backbone.js"></script>
+  <script src="../bower_components/backbone-validation/dist/backbone-validation.js"></script>
+
+  <script src="../app/javascripts/app.js"></script>
+  <script src="../app/javascripts/models/post.js"></script>
+  <script src="../app/javascripts/collections/post.js"></script>
+
+  <script>
+    mocha.setup('bdd');
+    var assert = chai.assert;
+    var expect = chai.expect;
+    var should = chai.should();
+  </script>
+  <script src="models/post_spec.js"></script>
+  <script>
+    if (navigator.userAgent.indexOf('PhantomJS' === -1)) mocha.run();
+  </script>
+</body>
+</html>

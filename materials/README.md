@@ -22,4 +22,4 @@ fe100-course
 
 ## client/phase-4
 - Run: $ npm run app
-- Setup: $ npm install
+- Setup: $ npm install && bower install

@@ -4,7 +4,6 @@ fe100-course
 ## server
 - Run: $ node index
 - Setup: $ npm install
-- Visit: $ http://localhost:3000
 
 ## client/phase-1
 - Run: $ gulp build
